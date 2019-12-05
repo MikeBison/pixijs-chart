@@ -18,6 +18,11 @@ export default {
       textStop: false
     };
   },
+  watch: {
+    score() {
+      this.reset();
+    }
+  },
   methods: {
     createChart() {
       this.container = new PIXI.Container();
@@ -158,6 +163,11 @@ export default {
       this.circleMove.endFill();
 
       this.chartCntainer.addChild(this.circleMove);
+    },
+    reset() {
+      this.stage.removeChild(this.container);
+      (this.scale = '0'), (this.radio = 0), (this.stop = false), (this.textStop = false);
+      this.createChart();
     }
   },
   created() {

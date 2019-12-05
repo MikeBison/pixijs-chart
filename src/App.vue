@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <chart @tryAgain="a" :score="100" :transparent="false" />
+    <chart @tryAgain="a" :score="score" :transparent="false" />
   </div>
 </template>
 
@@ -12,9 +12,14 @@ export default {
   components: {
     chart
   },
+  data() {
+    return {
+      score: 56
+    };
+  },
   methods: {
     a() {
-      console.log(111);
+      this.score = 86;
     }
   },
   beforeCreate() {
