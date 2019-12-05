@@ -172,8 +172,8 @@ export default {
   },
   mounted() {
     document.getElementById('__chart').appendChild(this.app.view);
-    // this.app.view.style.transform = `scale(${this.scale})`;
-    this.app.view.style.transform = `scale(1)`;
+    this.app.view.style.transform = `scale(${this.scale})`;
+    // this.app.view.style.transform = `scale(1)`;
     this.app.view.style.transformOrigin = '0 0';
     this.createChart();
   }
